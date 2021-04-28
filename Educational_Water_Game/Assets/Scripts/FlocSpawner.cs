@@ -41,7 +41,6 @@ public class FlocSpawner : MonoBehaviour
                     Instantiate(spawnableObject, new Vector3(-10, Random.Range(-5, 5), 0), Quaternion.identity);
                     break;
             }
-            Debug.Log(side);
             timer = Random.Range(minSpawnDelay, maxSpawnDelay);
         }
         

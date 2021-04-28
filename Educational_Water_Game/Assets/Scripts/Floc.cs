@@ -26,7 +26,10 @@ public class Floc : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            FindObjectOfType<Stage3Manager>().AddToScore();
+            FindObjectOfType<ScoreManager>().AddToScore();
+        } else
+        {
+            FindObjectOfType<ScoreManager>().ReduceLives();
         }
         Destroy(gameObject);
     }
