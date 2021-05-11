@@ -15,6 +15,12 @@ public class ScraperControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scraperRigidBody.transform.Rotate(0, 0, Input.GetAxis("Horizontal")/2);
+        if (Input.GetKey("left"))
+        {
+            scraperRigidBody.transform.Rotate(0, 0, 0.2f);
+        } else if (Input.GetKey("right"))
+        {
+            scraperRigidBody.transform.Rotate(0, 0, -0.2f);
+        }
     }
 }

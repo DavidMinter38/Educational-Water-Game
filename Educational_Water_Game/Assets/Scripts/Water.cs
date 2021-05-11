@@ -35,7 +35,7 @@ public class Water : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && !filtered)
         {
             waterSpriteRenderer.sprite = filteredSprite;
             GameObject spawnedDirt = Instantiate(filteredDirt, new Vector3(this.transform.position.x, filterObject.transform.position.y+0.4f, 0), Quaternion.identity);
